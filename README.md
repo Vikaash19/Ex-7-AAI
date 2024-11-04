@@ -32,8 +32,8 @@ def preprocess_text(text):
 	words = word_tokenize(text)
 	# Remove stopwords and punctuation
 	stop_words= set(stopwords.words( 'english'))
-	filtered_words= [word for word in words if word. lower() not in stop_words and word.isalnum()]
-
+	filtered_words= [word for word in words if word. lower() not in
+					stop_words and word.isalnum()]
 	# Stemming
 	stemmer = PorterStemmer()
 
@@ -58,8 +58,8 @@ def generate_summary(text,num_sentences=3):
 				else:
 					sentence_scores[sentence]+= freq
 	# Select top N sentences with highest scores
-	summary_sentences= sorted(sentence_scores, key=sentence_scores.get,reverse=True) [ : num_sentences]
-
+	summary_sentences= sorted(sentence_scores, key=sentence_scores.get,reverse=True)
+								 [ : num_sentences]
 	return ' '. join(summary_sentences)
 
 input_text=open('Applied_AI.txt', 'r')
@@ -70,15 +70,10 @@ print("Origina1 Text: ")
 print(txt)
 print("\nSummary : ")
 print(summary)
-
 ```
 
 ## Output:
-
 ![image](https://github.com/user-attachments/assets/d7303ef8-fa0b-4a76-abbc-cd6c95290a43)
-
 
 ## Result:
 Thus ,the program to perform the Text summarization is executed sucessfully.
-
-
