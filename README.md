@@ -37,17 +37,14 @@ def preprocess_text(text):
 	filtered_words= [word for word in words if word. lower() not in stop_words and word.isalnum()]
  	# Stemming
 	stemmer = PorterStemmer()
-
 	stemmed_words= [stemmer. stem(word) for word in filtered_words]
 	return stemmed_words
 
 def generate_summary(text,num_sentences=3):
-
 	sentences= sent_tokenize(text)
 	preprocessed_text = preprocess_text(text)
 	# Calculate the frequency of each word
 	word_frequencies =nltk. FreqDist (preprocessed_text)
-
 	# Calculate the score for each sentence based on word frequency
 	sentence_scores ={}
 	for sentence in sentences:
@@ -73,6 +70,7 @@ print("Origina1 Text: ")
 print (input_text )
 print( " \nSummary : " )
 print(summary)
+
 ```
 
 <H3>Output</H3>
