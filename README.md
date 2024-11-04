@@ -70,7 +70,6 @@ print("Origina1 Text: ")
 print (input_text )
 print( " \nSummary : " )
 print(summary)
-
 ```
 
 <H3>Output</H3>
