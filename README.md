@@ -62,22 +62,19 @@ def generate_summary(text,num_sentences=3):
 	return ' '. join(summary_sentences)
 
 if __name__=="__main__":
-	input_text ="""
-	Natural language processing (NLP) is a subfield of artificial intelligence.
-	It involves the development of algorithms and models that enact NLP.
-	NLP is used in various applications, including chatbots,
-	language Understanding, and language generation.
-	This program demonstrates a simple text summarization using NLP"""
-summary = generate_summary(input_text)
-print("Origina1 Text: ")
-print (input_text )
-print( " \nSummary : " )
-print(summary)
+	 with open("AAI.txt", "r") as file:
+        	input_text = file.read()
+	summary = generate_summary(input_text)
+	print("Origina1 Text: ")
+	print (input_text )
+	print( " \nSummary : " )
+	print(summary)
 ```
 
 <H3>Output</H3>
 
-![image](https://github.com/Jaiganesh235/Ex-7-AAI/assets/118657189/7e6623de-3c68-4001-b8a2-9a7a0844b6ff)
+![image](https://github.com/user-attachments/assets/204eaaca-9964-4b7e-bb49-7ae12c45a7f0)
+
 
 <H3>Result:</H3>
 Thus ,the program to perform the Text summarization is executed sucessfully.
