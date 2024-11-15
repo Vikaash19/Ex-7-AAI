@@ -62,7 +62,7 @@ def generate_summary(text,num_sentences=3):
 	return ' '. join(summary_sentences)
 
 if __name__=="__main__":
-	 with open("AAI.txt", "r") as file:
+	 with open("mytext.txt", "r") as file:
         	input_text = file.read()
 	summary = generate_summary(input_text)
 	print("Origina1 Text: ")
